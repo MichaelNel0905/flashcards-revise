@@ -1,0 +1,154 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.2;
+}
+*:focus {
+	outline: 0;
+}
+body {
+	background-color: #e6d9d1; 
+	font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+}
+h2 {
+	margin-top: 20px;
+	color: #663744;
+}
+#container {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	width: 850px;
+	height: 100%;
+}
+#clickBox {
+	position: absolute;
+	height: 500px;
+	width: 100%;
+	padding-top: 50px;
+}
+#clickBox h1,
+#clickBox h2 {
+	color: #7993ae;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+p {
+	margin: 15px 10px;
+}
+ul {
+	list-style-type: none;
+}
+
+.card {
+	width: 500px;
+	height: 300px;
+	font-size: 22px;
+	background-color: #f7f8fc;
+	border: 2px solid #7993ae;
+	border-radius: 20px;
+	position: absolute;
+	top: 130px;
+	left: 250px;
+	text-align: center;
+}
+.card p {
+	margin-top: 120px;
+}
+.center {
+	text-align: center;
+}
+input[src="images/prev.png"],
+input[src="images/flip.png"],
+input[src="images/next.png"] {
+	position: absolute;
+	top: 440px;
+}
+input[src="images/prev.png"] {
+	left: 250px;
+}
+input[src="images/flip.png"] {
+	left: 477px;
+}
+input[src="images/next.png"] {
+	left: 704px;
+}
+#sidebar {
+	font-size: 16px;
+	padding: 15px 10px 10px 10px;
+}
+#sidebar a:link,
+#sidebar a:visited {
+	color: #7993ae;
+}
+#sidebar a:hover,
+#sidebar a:active {
+	color: #b48386;
+}
+
+.question {
+	border-color: rgb(84, 91, 94);
+	width: max-content;
+	margin: auto;
+}
+button {
+	border: 1px solid lightblue;
+	border-radius: 7px;
+	width: 60px;
+	height: 20px;
+	display: grid;
+	margin-top: 10px !important;
+	margin: auto;
+}
+button:hover {
+	background-color: rgb(56, 50, 50);
+}
+button:active {
+	background-color: darkblue;
+	border: 2px solid rgb(47, 194, 243);
+}
+#questionFooter {
+	text-align: center;
+}
+#questions {
+	font-size: 20px;
+}
+#answers {
+	text-align: center;
+	height: max-content;
+	width: 400px;
+	margin: auto;
+	margin-bottom: 10px !important;
+	background-color: gray;
+	border-radius: 6px;
+	font-size: 20px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+input[type="text"]{
+	font: 15px/24px 'Muli', sans-serif;
+	width: 43%; 
+	box-sizing: border-box; 
+	letter-spacing: 1px;
+}
+input:focus {
+	border: 1px solid rgb(58, 114, 133);
+}
+.correctAnswer {
+	border: 1px solid green;
+}
+.incorrectAnswer {
+	border: 1px solid red;
+}
+.inputBox {
+	border: 1px solid gray;
+}
+#hide {
+	font-size: 10px;
+}
+#hide:hover {
+	text-decoration: underline;
+}
