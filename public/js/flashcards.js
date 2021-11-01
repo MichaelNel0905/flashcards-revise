@@ -76,8 +76,6 @@ function createCardSet(frontPhrases, backPhrases) {
 
 function createGame(cards) {
 	var cardBox = document.getElementById("flashcards"); // Find tag with flashcards id
-	var questions = document.getElementById("questions"); // Find tag with questions id
-	var answers = document.getElementById("answers"); // Find tag with answers id
 
 	// These two functions make sure there are no dupliates when link is clicked
 	if (document.getElementById("currentCard")) {
@@ -88,10 +86,15 @@ function createGame(cards) {
 		cardBox.removeChild(document.getElementById("cardFooter"));
 	}
 
-	cardBox.style = "display: flex;"; // Set cardBox display
-	questions.style = "display: none;"; // Hide questions display
-	answers.style = "display: none;"; // Hide answers display
+	if (document.getElementById("questions")) {
+		document.getElementById("questions").style = "display: none;";
+	}
 
+	if (document.getElementById("answers")) {
+		document.getElementById("answers").style = "display: none;";
+	}
+
+	cardBox.style = "display: flex;"; // Set cardBox display
 
 	// Start with the first card
 	cardBox.appendChild(cards[0]);
@@ -219,7 +222,6 @@ function createQuiz(questions) {
 	
 	// Make sure there is only questionBox displayed
 	questionBox.style = "display: unset;";
-	flashcards.style = "display: none;";
 
 
 	// Make sure there are no duplicates displaying when link is clicked
