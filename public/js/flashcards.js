@@ -86,13 +86,12 @@ function createGame(cards) {
 		cardBox.removeChild(document.getElementById("cardFooter"));
 	}
 
-	if (document.getElementById("questions")) {
-		document.getElementById("questions").style = "display: none;";
-	}
-
 	if (document.getElementById("answers")) {
 		document.getElementById("answers").style = "display: none;";
 	}
+
+		document.getElementById("questions").style = "display: none;";
+
 
 	cardBox.style = "display: flex;"; // Set cardBox display
 
@@ -216,14 +215,16 @@ function createQuiz(questions) {
 
 	// Locate necessary elements and assign to variables
 	var questionBox = document.getElementById("questions");
-    var flashcards = document.getElementById("flashcards");
 
 	var inputs = [];
 	
 	// Make sure there is only questionBox displayed
 	questionBox.style = "display: unset;";
 
-
+	// Make sure there is only the questions being displayed once the quiz is creating
+	if (document.getElementById("flashcards")) {
+		document.getElementById("flashcards").style = "display: none;";
+	}
 	// Make sure there are no duplicates displaying when link is clicked
 	if (document.getElementById("currentQuestion")) {
 		questionBox.removeChild(document.getElementById("currentQuestion"));
