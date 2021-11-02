@@ -309,13 +309,17 @@ function createQuiz(questions) {
 			answers.innerHTML = "<a id='hide'>Hide</a><h1>Answers: </h1>" + 
 					questions[0].answer.innerHTML + 
 					"</br></br>" + questions[1].answer.innerHTML + 
-					"</br></br>" + questions[2].answer.innerHTML;
+					"</br></br>" + questions[2].answer.innerHTML;		
 			
-
+			answers.style = "display: grid;";
 			var clickBox = document.getElementById("clickBox");
 			clickBox.appendChild(answers);
 
 		}		
+		
+		document.getElementById("hide").onclick = function() {
+			answers.style = "display: none;";
+		}
 		
 		
 	}	
